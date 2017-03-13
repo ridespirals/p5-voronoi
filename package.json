@@ -1,17 +1,18 @@
 {
-  "dependencies": {
-    "browser-sync": "^2.13.0",
-    "gulp": "^3.9.1"
-  },
-  "name": "voronoi",
+  "name": "p5-voronoi",
   "version": "1.0.0",
   "main": "gulpfile.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "author": "John Varga <john.g.varga@gmail.com>",
+  "license": "BSD-Clause3",
+  "description": "",
+  "devDependencies": {},
+  "dependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "voronoi": "^1.0.0"
+  }
 }
