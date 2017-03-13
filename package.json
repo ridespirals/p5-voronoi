@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1"
+  },
+  "name": "voronoi",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
