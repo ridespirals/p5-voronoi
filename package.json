@@ -5,6 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": "https://github.com/ridespirals/p5-voronoi",
   "keywords": [],
   "author": "John Varga <john.g.varga@gmail.com>",
   "license": "BSD-Clause3",
