@@ -18,6 +18,7 @@ const neon = {
 }
 const sites = []
 const voronoi = new Voronoi()
+let delaunay;
 let diagram = null
 
 const TotalSites = 255
@@ -34,11 +35,30 @@ function setup() {
         yb: h  // y-bottom
     }
 
-    for (var i = 0; i < TotalSites; i++) {
+    for (var i = 0; i < sqrt(w * h); i++) {
         sites.push(new p5.Vector(random(width), random(height)))
     }
 
     diagram = voronoi.compute(sites, bbox)
+
+    var i = 0
+    const vertices = diagram.edges.reduce((acc, val) => {
+        // i++ < 1 && console.debug('=> map', acc, { vax: val.va.x, vay: val.va.y })
+        // acc.push(new Delaunay.Point(val.va.x, val.va.y))
+        // acc.push(new Delaunay.Point(val.vb.x, val.vb.y))
+        // return acc
+    }, [])
+    // const vertices = diagram.edges.map(v => {
+    //     console.debug('=> map', v)
+    //     return new Delaunay.Point(v.x, v.y)
+    // })
+    // const triangles = diagram.edges.map(v => {
+    //     return { x: v.x, y: v.y }
+    // })
+    console.debug('vertices', vertices)
+    // delaunay = Delaunay.triangulate(vertices)
+    delaunay = Delaunay.triangulate(sites)
+
 
     // console.group('Voronoi Diagram')
     // console.debug('>> diagram', diagram)
